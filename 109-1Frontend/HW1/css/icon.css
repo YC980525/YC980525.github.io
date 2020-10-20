@@ -1,0 +1,102 @@
+.circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #808080;
+}
+
+.rounded-rectangle {
+    width: 62px;
+    height: 62px;
+    border-radius: 15px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #808080
+}
+
+.i{
+    background-image: url(../img/icon-list.png);
+}
+
+.i-person{
+    background-position-x: -40px;
+    background-position-y: -40px;
+}
+
+.i-phone{
+    background-position-x: -160px;
+    background-position-y: -40px;
+}
+
+.i-message{
+    background-position-x: -278px;
+    background-position-y: -40px;
+}  
+
+.i-clock{
+    background-position-x: -396px;
+    background-position-y: -40px;
+}
+
+.i-music{
+    background-position-x: -41px;
+    background-position-y: -160px;
+}    
+.i-photo{
+    background-position-x: -158px;
+    background-position-y: -160px;
+}
+
+.i-photocamera{
+    background-position-x: -278px;
+    background-position-y: -160px;
+}
+
+.i-videocamera{
+    background-position-x: -396px;
+    background-position-y: -160px;
+}
+
+.i-webcam{
+    background-position-x: -40px;
+    background-position-y: -280px;
+}
+
+.i-microphone{
+    background-position-x: -159px;
+    background-position-y: -280px;
+}
+
+.i-trashcan{
+    background-position-x: -278px;
+    background-position-y: -278px;
+}
+
+.i-find{
+    background-position-x: -396px;
+    background-position-y: -278px;
+}
+
+.i-location{
+    background-position-x: -38px;
+    background-position-y: -398px;
+}
+
+.i-setting{
+    background-position-x: -158px;
+    background-position-y: -398px;
+}
+
+.i-speaker{
+    background-position-x: -280px;
+    background-position-y: -398px;
+}
+
+.i-note{
+    background-position-x: -398px;
+    background-position-y: -398px;
+}
