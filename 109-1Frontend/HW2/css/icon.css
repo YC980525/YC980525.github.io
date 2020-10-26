@@ -1,0 +1,38 @@
+.circle {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    display: inline-block;
+    background-size: 690%;
+    border-color: #808080;
+    cursor: pointer;
+}
+
+
+.wallpaper{
+    background-image: url(../Image/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 360px;
+    height: 720px;
+    z-index: -1;
+}
+
+.icon{
+    background-image: url(../Image/template.jpg);
+}
+
+.icon-notes{
+    background-position-x: -100px;
+    background-position-y: -450px;
+}
+
+.icon-discord{
+    background-position-x: -393px;
+    background-position-y: -520px;
+
+    z-index: 1;
+    position: relative;
+    bottom: -268px;
+    left: 281.5px;
+}
