@@ -1,22 +1,35 @@
 .circle {
-    width: 53px;
-    height: 53px;
+    width: 51px;
+    height: 51px;
     border-radius: 50%;
     display: inline-block;
-    border-color: #808080;
     cursor: pointer;
+    text-align: center;
+    overflow: visible;
+}
+
+.caption {
+    display: block;
+    color: white;
+    font-size: 13px;
+    position: relative;
+    bottom: -52px;
+    left: -13px;
+    width: 80px
 }
 
 .roundedRect {
-    width: 700px;
-    height: 53px;
-    border-radius: 25px;
+    width: 309px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+
 }
 
 .wallpaper {
     background-image: url(../Image/wallpaper.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100%;
     width: 360px;
     height: 720px;
     z-index: -1;
@@ -25,10 +38,16 @@
 
 .icon {
     background-image: url(../Image/template.jpg);
+    background-size: 360px 720px;
 }
 
 .icon-googleWidget {
-    background-position: 0px 0px;
+
+    background-position: -26px -57px;
+    z-index: 1;
+    position: relative;
+    bottom: -10px;
+    left: 25px;
 }
 
 .test {
@@ -42,16 +61,17 @@
 }
 
 .icon-notes {
-    background-position-x: -100px;
-    background-position-y: -450px;
-}
-
-.icon-discord {
-    background-position-x: -393px;
-    background-position-y: -520px;
-
+    background-position: -27.5px -134px;
     z-index: 1;
     position: relative;
     bottom: -268px;
-    left: 281.5px;
+    left: 360px;
+}
+
+.icon-discord {
+    background-position: 163px -133px;
+    z-index: 1;
+    position: relative;
+    bottom: -100px;
+    left: 320px;
 }

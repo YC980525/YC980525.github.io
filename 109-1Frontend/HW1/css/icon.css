@@ -1,6 +1,6 @@
 .circle {
     width: 62px;
-    height: 62px;
+    height: 124px;
     border-radius: 50%;
     display: inline-block;
     border-style: solid;
@@ -18,85 +18,86 @@
     border-color: #808080
 }
 
-.i{
+.i {
     background-image: url(../img/icon-list.png);
 }
 
-.i-person{
+.i-person {
     background-position-x: -40px;
     background-position-y: -40px;
 }
 
-.i-phone{
+.i-phone {
     background-position-x: -160px;
     background-position-y: -40px;
 }
 
-.i-message{
+.i-message {
     background-position-x: -278px;
     background-position-y: -40px;
-}  
+}
 
-.i-clock{
+.i-clock {
     background-position-x: -396px;
     background-position-y: -40px;
 }
 
-.i-music{
+.i-music {
     background-position-x: -41px;
     background-position-y: -160px;
-}    
-.i-photo{
+}
+
+.i-photo {
     background-position-x: -158px;
     background-position-y: -160px;
 }
 
-.i-photocamera{
+.i-photocamera {
     background-position-x: -278px;
     background-position-y: -160px;
 }
 
-.i-videocamera{
+.i-videocamera {
     background-position-x: -396px;
     background-position-y: -160px;
 }
 
-.i-webcam{
+.i-webcam {
     background-position-x: -40px;
     background-position-y: -280px;
 }
 
-.i-microphone{
+.i-microphone {
     background-position-x: -159px;
     background-position-y: -280px;
 }
 
-.i-trashcan{
+.i-trashcan {
     background-position-x: -278px;
     background-position-y: -278px;
 }
 
-.i-find{
+.i-find {
     background-position-x: -396px;
     background-position-y: -278px;
 }
 
-.i-location{
+.i-location {
     background-position-x: -38px;
     background-position-y: -398px;
 }
 
-.i-setting{
+.i-setting {
     background-position-x: -158px;
     background-position-y: -398px;
 }
 
-.i-speaker{
+.i-speaker {
     background-position-x: -280px;
     background-position-y: -398px;
 }
 
-.i-note{
+.i-note {
     background-position-x: -398px;
     background-position-y: -398px;
 }
