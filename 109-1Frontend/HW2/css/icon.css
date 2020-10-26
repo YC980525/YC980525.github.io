@@ -28,13 +28,26 @@
 
 .wallpaper {
     background-image: url(../Image/wallpaper.jpg);
-    background-repeat: no-repeat;
     background-size: 100%;
+    position: relative;
+    border-radius: 21px;
     width: 360px;
     height: 720px;
-    z-index: -1;
+    z-index: 0;
+    bottom: 773px;
+    left: 14px;
 }
 
+.frame{
+    background-image: url(../Image/frame.jpg);
+    background-size: 433px 876px;
+    background-position: -20px -22px;
+    position: relative;
+    border-radius: 44px;
+    width: 388px;
+    height: 823px;
+    z-index: -2;
+}
 
 .icon {
     background-image: url(../Image/template.jpg);
