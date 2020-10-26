@@ -3,13 +3,17 @@
     height: 53px;
     border-radius: 50%;
     display: inline-block;
-    background-size: 690%;
     border-color: #808080;
     cursor: pointer;
 }
 
+.roundedRect {
+    width: 700px;
+    height: 53px;
+    border-radius: 25px;
+}
 
-.wallpaper{
+.wallpaper {
     background-image: url(../Image/wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -18,16 +22,31 @@
     z-index: -1;
 }
 
-.icon{
+
+.icon {
     background-image: url(../Image/template.jpg);
 }
 
-.icon-notes{
+.icon-googleWidget {
+    background-position: 0px 0px;
+}
+
+.test {
+    background-position: -110px -700px;
+}
+
+.icon-template {
+    background-size: 100%;
+    width: 360px;
+    height: 720px;
+}
+
+.icon-notes {
     background-position-x: -100px;
     background-position-y: -450px;
 }
 
-.icon-discord{
+.icon-discord {
     background-position-x: -393px;
     background-position-y: -520px;
 
