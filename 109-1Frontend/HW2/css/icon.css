@@ -4,15 +4,22 @@
     border-radius: 50%;
     cursor: pointer;
     text-align: center;
-
+    display: inline-block;
 }
 
 a {
     text-decoration: none;
 }
 
-div {
-    overflow: hidden;
+
+.box {
+    width: 450px;
+    height: 90px;
+}
+
+.bigBox {
+    width: 450px;
+    height: 800px
 }
 
 .caption {
@@ -64,8 +71,7 @@ div {
     width: 360px;
     height: 720px;
     position: relative;
-    left: 500px;
-    bottom: -769px;
+    opacity: 0.2;
 }
 
 .icon-googleWidget {
@@ -78,77 +84,147 @@ div {
 .icon-notes {
     background-position: -27.5px -134px;
     z-index: 1;
-    margin-top: 0px;
+    margin-top: 32px;
     margin-left: 40px;
-    display: inline-block;
 }
 
 .icon-miFit {
     background-position: 248px -133px;
     z-index: 1;
-    margin-top: 0px;
-    margin-left: 20px;
-    display: inline-block;
+    margin-left: 28px;
 }
 
 .icon-discord {
     display: inline-block;
     background-position: 163px -133px;
     z-index: 1;
-    margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 28px;
 }
 
 .icon-moneyLover {
     display: inline-block;
     background-position: 79px -133px;
     z-index: 1;
-    margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 28px;
 }
 
 .icon-clock {
     display: inline-block;
     background-position: -27.3px -228px;
     z-index: 1;
-    margin-top: 40px;
-    margin-left: 20px;
+    margin-top: 36px;
+    margin-left: 40px;
 }
 
 .icon-princessConnect {
     display: inline-block;
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 28px;
 }
 
 .icon-chrome {
     display: inline-block;
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 28px;
+}
+
+.icon-coc {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
 }
 
 .icon-messenger {
-
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 40px;
+    margin-top: 42px;
     margin-left: 40px;
+}
+
+.icon-instagram {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-wechat {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-weather {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
 }
 
 .icon-facebook {
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 42px;
+    margin-top: 46px;
     margin-left: 40px;
+}
+
+.icon-gallery {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-comic {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-line {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
 }
 
 .icon-google {
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 42px;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.icon-security {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-tools {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-dict {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-call {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: 92px;
     margin-left: 40px;
 }
