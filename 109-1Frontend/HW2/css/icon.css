@@ -2,15 +2,20 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    
     cursor: pointer;
     text-align: center;
+
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
+
+div {
+    overflow: hidden;
+}
 
 .caption {
-    display: block;
     color: white;
     font-size: 13px;
     position: relative;
@@ -28,7 +33,7 @@ a {text-decoration: none;}
 
 }
 
-.frame{
+.frame {
     background-image: url(../Image/frame.jpg);
     background-size: 433px 874px;
     background-position: -20px -22px;
@@ -59,12 +64,11 @@ a {text-decoration: none;}
     width: 360px;
     height: 720px;
     position: relative;
-    left: 14px;
-    bottom: -1000px;
+    left: 500px;
+    bottom: -769px;
 }
 
 .icon-googleWidget {
-
     background-position: -26px -57px;
     z-index: 1;
     margin-top: -663px;
@@ -74,56 +78,64 @@ a {text-decoration: none;}
 .icon-notes {
     background-position: -27.5px -134px;
     z-index: 1;
-    margin-top: 32px;
+    margin-top: 0px;
     margin-left: 40px;
+    display: inline-block;
 }
 
 .icon-miFit {
     background-position: 248px -133px;
     z-index: 1;
-    margin-top: -52px;
-    margin-left: 126px;
+    margin-top: 0px;
+    margin-left: 20px;
+    display: inline-block;
 }
 
 .icon-discord {
+    display: inline-block;
     background-position: 163px -133px;
     z-index: 1;
-    margin-top: -52px;
-    margin-left: 211px;
+    margin-top: 0px;
+    margin-left: 20px;
 }
 
 .icon-moneyLover {
+    display: inline-block;
     background-position: 79px -133px;
     z-index: 1;
-    margin-top: -52px;
-    margin-left: 295px;
+    margin-top: 0px;
+    margin-left: 20px;
 }
 
 .icon-clock {
-    background-position: -27.5px -228px;
+    display: inline-block;
+    background-position: -27.3px -228px;
     z-index: 1;
-    margin-top: 42px;
-    margin-left: 40px;
+    margin-top: 40px;
+    margin-left: 20px;
 }
 
 .icon-princessConnect {
+    display: inline-block;
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: -52px;
-    margin-left: 126px;
+    margin-top: 0px;
+    margin-left: 20px;
 }
 
 .icon-chrome {
+    display: inline-block;
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: -52px;
-    margin-left: 211px;
+    margin-top: 0px;
+    margin-left: 20px;
 }
 
 .icon-messenger {
+
     background-position: -27.5px -228px;
     z-index: 1;
-    margin-top: 43px;
+    margin-top: 40px;
     margin-left: 40px;
 }
 
