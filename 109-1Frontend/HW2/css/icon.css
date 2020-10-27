@@ -71,7 +71,7 @@ a {
     width: 360px;
     height: 720px;
     position: relative;
-    opacity: 0.2;
+
 }
 
 .icon-googleWidget {
@@ -118,27 +118,27 @@ a {
 
 .icon-princessConnect {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -112px -228px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-chrome {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -197px -228px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-coc {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -282px -228px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-messenger {
-    background-position: -27.5px -228px;
+    background-position: -27.5px -323px;
     z-index: 1;
     margin-top: 42px;
     margin-left: 40px;
@@ -146,27 +146,27 @@ a {
 
 .icon-instagram {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -112px -323px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-wechat {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -197px -323px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-weather {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -282px -323px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-facebook {
-    background-position: -27.5px -228px;
+    background-position: -27.5px -417px;
     z-index: 1;
     margin-top: 46px;
     margin-left: 40px;
@@ -174,27 +174,27 @@ a {
 
 .icon-gallery {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -112px -417px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-comic {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -196px -417px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-line {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -282px -417px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-google {
-    background-position: -27.5px -228px;
+    background-position: -27.5px -512px;
     z-index: 1;
     margin-top: 50px;
     margin-left: 40px;
@@ -202,29 +202,50 @@ a {
 
 .icon-security {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -112px -512px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-tools {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -196px -512px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-dict {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -281px -512px;
     z-index: 1;
     margin-left: 28px;
 }
 
 .icon-call {
     display: inline-block;
-    background-position: -27.5px -228px;
+    background-position: -27.5px -645px;
     z-index: 1;
     margin-top: 92px;
     margin-left: 40px;
+}
+
+.icon-messange {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-browser {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.icon-camera {
+    display: inline-block;
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-left: 28px;
 }
