@@ -1,52 +1,52 @@
 .circle {
-    width: 51px;
-    height: 51px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    display: inline-block;
+    
     cursor: pointer;
     text-align: center;
-    overflow: visible;
 }
+
+a {text-decoration: none;}
 
 .caption {
     display: block;
     color: white;
     font-size: 13px;
     position: relative;
-    bottom: -52px;
+    bottom: -56px;
     left: -13px;
-    width: 80px
+    width: 80px;
+    z-index: 1;
 }
 
 .roundedRect {
     width: 309px;
-    height: 40px;
+    height: 44px;
     border-radius: 20px;
     cursor: pointer;
 
 }
 
+.frame{
+    background-image: url(../Image/frame.jpg);
+    background-size: 433px 874px;
+    background-position: -20px -22px;
+    border-radius: 44px;
+    width: 388px;
+    height: 821px;
+    z-index: -2;
+}
+
 .wallpaper {
     background-image: url(../Image/wallpaper.jpg);
     background-size: 100%;
-    position: relative;
     border-radius: 21px;
     width: 360px;
     height: 720px;
     z-index: 0;
-    bottom: 773px;
-    left: 14px;
-}
-
-.frame{
-    background-image: url(../Image/frame.jpg);
-    background-size: 433px 876px;
-    background-position: -20px -22px;
-    position: relative;
-    border-radius: 44px;
-    width: 388px;
-    height: 823px;
-    z-index: -2;
+    margin-top: -772px;
+    margin-left: 14px;
 }
 
 .icon {
@@ -58,33 +58,50 @@
 
     background-position: -26px -57px;
     z-index: 1;
-    position: relative;
-    bottom: -10px;
-    left: 25px;
-}
-
-.test {
-    background-position: -110px -700px;
+    margin-top: -663px;
+    margin-left: 40px;
 }
 
 .icon-template {
     background-size: 100%;
     width: 360px;
     height: 720px;
+    position: relative;
+    left: 70px;
+    bottom: -769px;
 }
 
 .icon-notes {
     background-position: -27.5px -134px;
     z-index: 1;
-    position: relative;
-    bottom: -268px;
-    left: 360px;
+    margin-top: 32px;
+    margin-left: 40px;
+}
+
+.icon-miFit {
+    background-position: 248px -133px;
+    z-index: 1;
+    margin-top: -52px;
+    margin-left: 104px;
 }
 
 .icon-discord {
     background-position: 163px -133px;
     z-index: 1;
-    position: relative;
-    bottom: -100px;
-    left: 320px;
+    margin-top: -52px;
+    margin-left: 156px;
+}
+
+.icon-moneyLover {
+    background-position: 79px -133px;
+    z-index: 1;
+    margin-top: -52px;
+    margin-left: 240px;
+}
+
+.icon-clock {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: 42px;
+    margin-left: 40px;
 }
