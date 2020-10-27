@@ -54,21 +54,21 @@ a {text-decoration: none;}
     background-size: 360px 720px;
 }
 
+.icon-template {
+    background-size: 100%;
+    width: 360px;
+    height: 720px;
+    position: relative;
+    left: 14px;
+    bottom: -1000px;
+}
+
 .icon-googleWidget {
 
     background-position: -26px -57px;
     z-index: 1;
     margin-top: -663px;
     margin-left: 40px;
-}
-
-.icon-template {
-    background-size: 100%;
-    width: 360px;
-    height: 720px;
-    position: relative;
-    left: 70px;
-    bottom: -769px;
 }
 
 .icon-notes {
@@ -82,24 +82,59 @@ a {text-decoration: none;}
     background-position: 248px -133px;
     z-index: 1;
     margin-top: -52px;
-    margin-left: 104px;
+    margin-left: 126px;
 }
 
 .icon-discord {
     background-position: 163px -133px;
     z-index: 1;
     margin-top: -52px;
-    margin-left: 156px;
+    margin-left: 211px;
 }
 
 .icon-moneyLover {
     background-position: 79px -133px;
     z-index: 1;
     margin-top: -52px;
-    margin-left: 240px;
+    margin-left: 295px;
 }
 
 .icon-clock {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: 42px;
+    margin-left: 40px;
+}
+
+.icon-princessConnect {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: -52px;
+    margin-left: 126px;
+}
+
+.icon-chrome {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: -52px;
+    margin-left: 211px;
+}
+
+.icon-messenger {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: 43px;
+    margin-left: 40px;
+}
+
+.icon-facebook {
+    background-position: -27.5px -228px;
+    z-index: 1;
+    margin-top: 42px;
+    margin-left: 40px;
+}
+
+.icon-google {
     background-position: -27.5px -228px;
     z-index: 1;
     margin-top: 42px;
