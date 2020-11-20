@@ -1,0 +1,35 @@
+img {
+    width: 400px;
+}
+
+#dog {
+    width: 250px;
+}
+
+.border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2196F3;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.img-cat {
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    background-image: url(../img/dog-cat.jpg);
+    background-size: cover;
+    background-position-x: -200px;
+}
+
+.img-dog {
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    background-image: url(../img/dog-cat.jpg);
+    background-size: cover;
+    /* background-position-x: 0px; */
+}
