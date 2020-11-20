@@ -1,21 +1,14 @@
-Template: https://startbootstrap.com/theme/resume
+# 個人網站網址
+https://yc980525.github.io/index.html
 
-思路：
-由於大學履歷蠻空的，所以主要以摸索特效爲主。
+# 思路與修改
+由於大學履歷蠻空的，所以主要在摸索呈現方式。
+* 覺得目錄在左邊太大了所以移去上面了。
+* Skill方面覺得用bar來呈現比較直觀，原本想試弄成滑到那部分才開始有動可是試了幾種方法都不成功就弄成靜態了。
+* Activity方面是有動畫的但是一進入網頁就有動畫了所以滑到下面的時候動畫已經結束了。
+* Interest是覺得不太重要所以不想直接放在頁面所以用另外的視窗呈現。
 
-修改的地方：
-1.覺得目錄太大有點礙眼所以移去上面了。
-2.Activity項目有增加動畫但是由於一開始就會有了所以看不到。
-3.Interest項目增加了小視窗，避免在同一頁塞太多東西。
-
-# Change
-Change navigation bar to horizontal
-Change background color to linear gradient
-Change left/right padding of the page
-
-# Intend
-1. Profile Pic
-2. Interest: Handcraft/Gaming(King of Glory/Clash of Clan/Princess Connect)
-3. Activities: High School Anniversary/ NTUMSA orietation/ 24 festive drum
-
-Skill Progress Bar
+# 參考
+[Bootstrap](https://startbootstrap.com/theme/resume)
+[Bar和Interest靈感](https://bootstrapmade.com/demo/Lonely/)
+[視窗code](https://www.w3schools.com/howto/howto_css_modal_images.asp)

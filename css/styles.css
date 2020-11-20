@@ -10154,7 +10154,7 @@ section.resume-section .resume-section-content {
 
 .box {
   position: relative;
-  width: 30rem;
+  width: 30%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -10290,7 +10290,7 @@ section.resume-section .resume-section-content {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -10344,7 +10344,7 @@ section.resume-section .resume-section-content {
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
-      width: 100%;
+      width: 80%;
   }
 }
 * {box-sizing:border-box}
