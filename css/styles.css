@@ -10488,3 +10488,9 @@ section.resume-section .resume-section-content {
 .big{
   font-size: 18px;
 }
+
+@media only screen and (max-width: 700px){
+  .box {
+      width: 80%;
+  }
+}
