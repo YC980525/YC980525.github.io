@@ -57,6 +57,6 @@ $(() => {
     firebase.auth().onAuthStateChanged(authStateObserver);
   }
   initFirebaseAuth()
-  $('signInBtn').click(signIn())
-  
+  $('#signInBtn').click(signIn())
+  $('#signOutBtn').click(signOut())
 })
