@@ -13,6 +13,10 @@ $(() => {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig)
   
+  var totalExpense = 0
+  var totalIncome = 0
+  var balance = 0
+  var lengthOfData = 0
 
   function authStateObserver(user) {
     if (user) { // User is signed in!
@@ -43,18 +47,15 @@ $(() => {
         }
       })
 
-      var totalExpense = 0
-    var totalIncome = 0
-    var balance = 0
-  // Print data
-  console.log(currentUID)
-  console.log("start")
-  var query = firebase.database().ref("YC")
-  var numberOfData = 0
-  query.once("value").then((snapshot) => {
+      
+        // Print data
+        console.log(currentUID)
+        console.log("start")
+        var query = firebase.database().ref("YC")
+        query.once("value").then((snapshot) => {
     
-    snapshot.forEach((childSnapshot) => {
-      var key = childSnapshot.key
+        snapshot.forEach((childSnapshot) => {
+        var key = childSnapshot.key
 
 
       if (key == "totalExpense") {
