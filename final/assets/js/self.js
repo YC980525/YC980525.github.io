@@ -227,6 +227,7 @@ $(() => {
         //var profilePicUrl = getProfilePicUrl();
         //var userName = getUserName();
       console.log("hi")
+      console.log(firebase.auth().currentUser.uid)
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
       $('#signOutBtn').removeAttr('hidden')
