@@ -32,8 +32,8 @@ $(() => {
   function authStateObserver(user) {
     if (user) { // User is signed in!
         // Get the signed-in user's profile pic and name.
-        var profilePicUrl = getProfilePicUrl();
-        var userName = getUserName();
+        //var profilePicUrl = getProfilePicUrl();
+        //var userName = getUserName();
       console.log("hi")
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
