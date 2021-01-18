@@ -230,17 +230,17 @@ $(() => {
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
       $('#signOutBtn').removeAttr('hidden')
-        if (newUser == true) {
-            saveUserInformation();
-            //saveUserMatchData();
-        }
+      $('#detail').removeAttr('hidden') 
+      $('#addTrans').removeAttr('hidden') 
         // We save the Firebase Messaging Device token and enable notifications.
         // saveMessagingDeviceToken();
     } else { // User is signed out!
         // Hide user's profile and sign-out button.
         $('#test').attr('hidden', 'true')
         $('#signInBtn').removeAttr('hidden')
-        $('#signOutBtn').attr('hidden', 'true')
+      $('#signOutBtn').attr('hidden', 'true')
+      $('#detail').attr('hidden', 'true')
+      $('#addTrans').attr('hidden', 'true') 
     }
   }
 
