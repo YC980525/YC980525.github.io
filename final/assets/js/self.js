@@ -32,16 +32,17 @@ $(() => {
       let ref = firebase.database().ref();
       ref.once("value")
       .then(function(snapshot) {
-      var oldUser = snapshot.hasChild(currentUID)
+        let oldUser = snapshot.hasChild(currentUID)
+        if (!oldUser) {
+          console.log(currentUser)
+          firebase.database().ref(currentUID).set({
+            totalExpense: 0,
+            totalIncome:0
+          })
+        }
       })
       
-      if (!oldUser) {
-        console.log(currentUser)
-        firebase.database().ref(currentUID).set({
-          totalExpense: 0,
-          totalIncome:0
-        })
-      }
+      
 
         // We save the Firebase Messaging Device token and enable notifications.
         // saveMessagingDeviceToken();
@@ -151,7 +152,11 @@ $(() => {
 
             console.log(detailTag)
             console.log($(dummyTag).children(detailTag).text())
-            
+
+            if ($(dummyTag).parent().children().length == 1) {
+              $(dummyTag).parent().parent().parent().remove()
+            }
+
             $(dummyTag).remove()
           })
 
