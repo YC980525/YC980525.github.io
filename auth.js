@@ -35,9 +35,9 @@ $(() => {
         var profilePicUrl = getProfilePicUrl();
         var userName = getUserName();
   
-      $('#test').removeAttribute('hidden')
-      $('#signInBtn').setAttribute('hidden', 'true')
-      $('#signOutBtn').removeAttribute('hidden')
+      $('#test').removeAttr('hidden')
+      $('#signInBtn').attr('hidden', 'true')
+      $('#signOutBtn').removeAttr('hidden')
         if (newUser == true) {
             saveUserInformation();
             //saveUserMatchData();
@@ -47,15 +47,16 @@ $(() => {
         checkMatchRoom();
     } else { // User is signed out!
         // Hide user's profile and sign-out button.
-        $('#test').setAttribute('hidden', 'true')
-        $('#signInBtn').removeAttribute('hidden')
-        $('#signOutBtn').setAttribute('hidden', 'true')
+        $('#test').attr('hidden', 'true')
+        $('#signInBtn').removeAttr('hidden')
+        $('#signOutBtn').attr('hidden', 'true')
     }
   }
   
   function initFirebaseAuth() {
     firebase.auth().onAuthStateChanged(authStateObserver);
   }
-  $('signInBtn').click(signIn())
   initFirebaseAuth()
+  $('signInBtn').click(signIn())
+  
 })
