@@ -21,9 +21,6 @@ $(() => {
 
   function authStateObserver(user) {
     if (user) { // User is signed in!
-        // Get the signed-in user's profile pic and name.
-        //var profilePicUrl = getProfilePicUrl();
-        //var userName = getUserName();
       console.log("hi")
 
       currentUID = firebase.auth().currentUser.uid
@@ -54,7 +51,6 @@ $(() => {
         console.log("start")
         var query = firebase.database().ref(currentUID)
         query.once("value").then((snapshot) => {
-    
         snapshot.forEach((childSnapshot) => {
         var key = childSnapshot.key
 
@@ -147,13 +143,14 @@ $(() => {
 
         // We save the Firebase Messaging Device token and enable notifications.
         // saveMessagingDeviceToken();
-    } else { // User is signed out!
-        // Hide user's profile and sign-out button.
+    } else { // signed out
         $('#test').attr('hidden', 'true')
         $('#signInBtn').removeAttr('hidden')
-      $('#signOutBtn').attr('hidden', 'true')
-      $('#detail').attr('hidden', 'true')
-      $('#addTrans').attr('hidden', 'true') 
+        $('#signOutBtn').attr('hidden', 'true')
+        $('#detail').find('*').not('#overview').remove();  
+        $('#detail').attr('hidden', 'true')
+        $('#addTrans').attr('hidden', 'true') 
+      
     }
   }
 
@@ -179,9 +176,6 @@ $(() => {
     firebase.auth().signOut();
   })
 
-
-  
- 
   // Insertion
   $('#save').click(() => {
     var e = document.getElementById("category");
