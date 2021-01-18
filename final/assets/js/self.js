@@ -147,7 +147,7 @@ $(() => {
         $('#test').attr('hidden', 'true')
         $('#signInBtn').removeAttr('hidden')
         $('#signOutBtn').attr('hidden', 'true')
-        $('#detail').find('*').not('#overview').remove();  
+        $("#detail > *:not('#overview')").remove()
         $('#detail').attr('hidden', 'true')
         $('#addTrans').attr('hidden', 'true') 
       
