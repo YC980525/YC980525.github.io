@@ -17,6 +17,7 @@ $(() => {
   var totalIncome = 0
   var balance = 0
   var numberOfData = 0
+  var currentUID = ''
 
   function authStateObserver(user) {
     if (user) { // User is signed in!
@@ -25,7 +26,7 @@ $(() => {
         //var userName = getUserName();
       console.log("hi")
 
-      var currentUID = firebase.auth().currentUser.uid
+      currentUID = firebase.auth().currentUser.uid
       //console.log(currentUID)
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
