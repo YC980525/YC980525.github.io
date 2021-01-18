@@ -14,20 +14,7 @@ $(() => {
   
   var newUser = false;
   
-  function signIn() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        if (result.additionalUserInfo.isNewUser == true) {
-            newUser = true;
-        }
-    }).catch(function(error) {
-        console.log(error.message);
-    });
-  }
   
-  function signOut() {
-    firebase.auth().signOut();
-  }
   
   function authStateObserver(user) {
     if (user) { // User is signed in!
@@ -44,7 +31,6 @@ $(() => {
         }
         // We save the Firebase Messaging Device token and enable notifications.
         // saveMessagingDeviceToken();
-        checkMatchRoom();
     } else { // User is signed out!
         // Hide user's profile and sign-out button.
         $('#test').attr('hidden', 'true')
@@ -57,6 +43,18 @@ $(() => {
     firebase.auth().onAuthStateChanged(authStateObserver);
   }
   initFirebaseAuth()
-  $('#signInBtn').click(signIn())
-  $('#signOutBtn').click(signOut())
+
+  $('#signInBtn').click(() => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        if (result.additionalUserInfo.isNewUser == true) {
+            newUser = true;
+        }
+    }).catch(function(error) {
+        console.log(error.message);
+    });  
+  })
+  $('#signOutBtn').click(() => {
+    firebase.auth().signOut();
+  })
 })
