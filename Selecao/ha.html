@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test">overview</div>
+    <button id="test">test1</button>
+
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <script>
+        
+        console.log($('#test').text())
+
+        $(document).on("click", '#test', ()=>{
+            $('#test').remove()
+            console.log('success')
+        })
+        
+        
+
+        $('#btn').click(()=>{
+            $('#overview').append("<div id='test'>lalala<div>aiodhias</div></div>")
+            console.log('successAgain')
+        })
+
+    </script>
+</body>
+</html>
