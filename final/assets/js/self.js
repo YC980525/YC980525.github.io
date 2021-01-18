@@ -22,7 +22,7 @@ $(() => {
       console.log("hi")
 
       var currentUID = firebase.auth().currentUser.uid
-      console.log(currentUID)
+      //console.log(currentUID)
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
       $('#signOutBtn').removeAttr('hidden')
@@ -34,7 +34,7 @@ $(() => {
       .then(function(snapshot) {
         let oldUser = snapshot.hasChild(currentUID)
         if (!oldUser) {
-          console.log(currentUser)
+          console.log(currentUID)
           firebase.database().ref(currentUID).set({
             totalExpense: 0,
             totalIncome:0
@@ -78,11 +78,13 @@ $(() => {
     firebase.auth().signOut();
   })
 
+
   var totalExpense = 0
   var totalIncome = 0
   var balance = 0
   // Print data
-
+  console.log(currentUID)
+  
   var query = firebase.database().ref("YC")
   var numberOfData = 0
   query.once("value").then((snapshot) => {
