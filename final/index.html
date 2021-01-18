@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div class="container row main-margin">
+    <div style="margin-right:auto;"><a class="title" href="index.html">YC Book Keeping</a></div>
+    
+    <button id="signInBtn" class="btn btn-decoration">sign in</button>
+    <button id="addTrans" type="button" class="btn btn-decoration" data-toggle="modal" data-target="#addTransModal"hidden="true">Add Transaction</button>
+    <button id="signOutBtn" class="btn btn-decoration" hidden="true">Sign Out</button>
+    <div class="modal fade" id="addTransModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Add Transaction</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
+              <div class="modal-body">
+                  <form>
+                      <div class="alert alert-warning">
+                          <!--Expenses-->
+                          <div class="form-group mb-3 ">
+                              <label for="excategory " style="color:#212529">Expenses</label>
+                          </div>
+                          
+
+                          <div class="input-group mb-3">
+                              
+                            <select class="custom-select " id="category" style="background: #ffffff;">
+                            <option value="0">Category</option>                                            
+                            <option value="1">Food</option>
+                            <option value="2">Bills</option>
+                            <option value="3">Tax</option>
+                            <option value="4">Transportation</option>
+                            <option value="5">Entertainment</option>
+                            <option value="6">Sport</option>                                                                       
+                            <option value="7">Pet</option>
+                            <option value="8">Health</option>
+                            <option value="9">Others</option>
+                            <option value="10">Income</option>
+                            <optgroup label="Swedish Cars">
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                              <option value="mercedes">Mercedes</option>
+                              <option value="audi">Audi</option>
+                            </optgroup>                                            
+                          </select>
+                          </div>
+
+                          <div class="input-group mb-3 ">
+                              <input type="number" class="form-control" id="amount" style="background: #ffffff;" placeholder="Amount">
+                          </div>
+                          
+                          <div class="input-group mb-3 ">
+                              
+                              <input type="date" class="form-control " id="date" aria-label="date">
+                          </div>
+
+                          <button type="button" class="btn btn-outline-danger" id="save">Save</button>
+
+                      </div>
+
+
+                      
+                      </div>
+                  </form>
+              </div>
+
+              
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container row sub-margin" id="detail" hidden="true">
+    
+    <div class="detail-container" id="overview">
+      <div class="modal-header">
+          <h5 class="modal-title sub-title">Overview</h5>             
+      </div>
+
+      <div class="modal-body">
+              <div class="alert sub-detail">
+                  <div class="input-group mb-3">
+                    <div class="detail-font" style="margin-right: auto;">Expenses</div>
+                    <div id="expense">0</div>
+                  </div>
+                  
+                  
+
+                  <div class="input-group mb-3 ">
+                    <div class="detail-font" style="margin-right: auto;">Income</div>
+                    <div id="income">0</div>
+                  </div>
+                 
+                  <div class="input-group mb-3 ">
+                    <div class="detail-font" style="margin-right: auto;">Balance</div>
+                    <div id="balance">0</div>
+                  </div>
+
+
+              </div>
+
+              </div>
+          
+      </div>
+
+      
+
+          
+    </div>
+
+    
+    
+  </div>
+    
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/100%svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none" style="bottom:0px;position:absolute;">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+<script src="./assets/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js "></script>
+<!--chart.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+<script src="./assets/js/self.js"></script>
+</body>
+</html>
