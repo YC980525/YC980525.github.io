@@ -13,6 +13,70 @@ $(() => {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig)
   
+
+  function authStateObserver(user) {
+    if (user) { // User is signed in!
+        // Get the signed-in user's profile pic and name.
+        //var profilePicUrl = getProfilePicUrl();
+        //var userName = getUserName();
+      console.log("hi")
+
+      var currentUID = firebase.auth().currentUser.uid
+      console.log(currentUID)
+      $('#test').removeAttr('hidden')
+      $('#signInBtn').attr('hidden', 'true')
+      $('#signOutBtn').removeAttr('hidden')
+      $('#detail').removeAttr('hidden') 
+      $('#addTrans').removeAttr('hidden')
+      
+      let ref = firebase.database().ref();
+      ref.once("value")
+      .then(function(snapshot) {
+      var oldUser = snapshot.hasChild(currentUID)
+      })
+      
+      if (!oldUser) {
+        console.log(currentUser)
+        firebase.database().ref(currentUID).set({
+          totalExpense: 0,
+          totalIncome:0
+        })
+      }
+
+        // We save the Firebase Messaging Device token and enable notifications.
+        // saveMessagingDeviceToken();
+    } else { // User is signed out!
+        // Hide user's profile and sign-out button.
+        $('#test').attr('hidden', 'true')
+        $('#signInBtn').removeAttr('hidden')
+      $('#signOutBtn').attr('hidden', 'true')
+      $('#detail').attr('hidden', 'true')
+      $('#addTrans').attr('hidden', 'true') 
+    }
+  }
+
+  function initFirebaseAuth() {
+    firebase.auth().onAuthStateChanged(authStateObserver);
+  }
+  initFirebaseAuth()
+
+  $('#signInBtn').click(() => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        if (result.additionalUserInfo.isNewUser == true) {
+          newUser = true;
+          
+          console.log(true)
+        }
+    }).catch(function(error) {
+        console.log(error.message);
+    });  
+  })
+
+  $('#signOutBtn').click(() => {
+    firebase.auth().signOut();
+  })
+
   var totalExpense = 0
   var totalIncome = 0
   var balance = 0
@@ -221,49 +285,5 @@ $(() => {
     numberOfData++
   })
   
-  function authStateObserver(user) {
-    if (user) { // User is signed in!
-        // Get the signed-in user's profile pic and name.
-        //var profilePicUrl = getProfilePicUrl();
-        //var userName = getUserName();
-      console.log("hi")
-      console.log(firebase.auth().currentUser.uid)
-      $('#test').removeAttr('hidden')
-      $('#signInBtn').attr('hidden', 'true')
-      $('#signOutBtn').removeAttr('hidden')
-      $('#detail').removeAttr('hidden') 
-      $('#addTrans').removeAttr('hidden') 
-        // We save the Firebase Messaging Device token and enable notifications.
-        // saveMessagingDeviceToken();
-    } else { // User is signed out!
-        // Hide user's profile and sign-out button.
-        $('#test').attr('hidden', 'true')
-        $('#signInBtn').removeAttr('hidden')
-      $('#signOutBtn').attr('hidden', 'true')
-      $('#detail').attr('hidden', 'true')
-      $('#addTrans').attr('hidden', 'true') 
-    }
-  }
-
-  function initFirebaseAuth() {
-    firebase.auth().onAuthStateChanged(authStateObserver);
-  }
-  initFirebaseAuth()
-
-  $('#signInBtn').click(() => {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        if (result.additionalUserInfo.isNewUser == true) {
-          newUser = true;
-          
-          console.log(true)
-        }
-    }).catch(function(error) {
-        console.log(error.message);
-    });  
-  })
-
-  $('#signOutBtn').click(() => {
-    firebase.auth().signOut();
-  })
+  
 }) 
