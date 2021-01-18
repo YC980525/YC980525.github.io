@@ -16,7 +16,7 @@ $(() => {
   var totalExpense = 0
   var totalIncome = 0
   var balance = 0
-  var lengthOfData = 0
+  var numberOfData = 0
 
   function authStateObserver(user) {
     if (user) { // User is signed in!
