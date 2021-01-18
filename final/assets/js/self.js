@@ -51,7 +51,7 @@ $(() => {
         // Print data
         console.log(currentUID)
         console.log("start")
-        var query = firebase.database().ref("YC")
+        var query = firebase.database().ref(currentUID)
         query.once("value").then((snapshot) => {
     
         snapshot.forEach((childSnapshot) => {
@@ -97,8 +97,8 @@ $(() => {
               totalExpense -= changeOfAmount
               balance += changeOfAmount
               console.log(key)
-              firebase.database().ref('YC/' + key +'/'+ type).remove()
-              firebase.database().ref('YC/').update({totalExpense: totalExpense})
+              firebase.database().ref(currentUID + '/' + key +'/'+ type).remove()
+              firebase.database().ref(currentUID).update({totalExpense: totalExpense})
         
               $("#expense").text(totalExpense)
             }
@@ -107,8 +107,8 @@ $(() => {
               totalIncome -= changeOfAmount
               balance -= changeOfAmount
               console.log(key)
-              firebase.database().ref('YC/' + key +'/'+ type).remove()
-              firebase.database().ref('YC/').update({totalIncome: totalIncome})
+              firebase.database().ref(currentUID + '/' + key +'/'+ type).remove()
+              firebase.database().ref(currentUID).update({totalIncome: totalIncome})
         
               $("#income").text(totalIncome)
             }
@@ -202,13 +202,13 @@ $(() => {
       if ($(dateTag).length != 0 && $(detailTag).length == 0)  {
         
         $(dateTag).append("<div class='input-group mb-3 label'id="+numberOfData+"><div class='detail-font' style='margin-right: auto;' id='Category'>" + category + "</div><div id="+ date + category+">" + amount + "</div></div>") 
-        firebase.database().ref('YC/' + date).child(category).set(amount)
+        firebase.database().ref(currentUID + '/' + date).child(category).set(amount)
         
       }
       else if ($(dateTag).length != 0 && $(detailTag).length != 0){
         let originalAmount = parseInt($(detailTag).text())
         let newAmount = amount + originalAmount
-        firebase.database().ref('YC/' + date).child(category).set(newAmount)
+        firebase.database().ref(currentUID + '/' + date).child(category).set(newAmount)
         $(detailTag).text(newAmount)
       }
 
@@ -219,14 +219,14 @@ $(() => {
         $("#dummy").removeAttr("id")
 
         $(dateTag).append("<div class='input-group mb-3 label'id="+numberOfData+"><div class='detail-font' style='margin-right: auto;' id='Category'>" + category + "</div><div id="+ date + category+">" + amount + "</div></div>") 
-        firebase.database().ref('YC/' + date).child(category).set(amount)  
+        firebase.database().ref(currentUID + '/' + date).child(category).set(amount)  
       }
 
       if (category != "Income") {
         totalExpense += amount
         balance -= amount
 
-        firebase.database().ref('YC/').update({totalExpense: totalExpense})
+        firebase.database().ref(currentUID).update({totalExpense: totalExpense})
         
         $("#expense").text(totalExpense)
       }
@@ -235,7 +235,7 @@ $(() => {
         totalIncome += amount
         balance += amount
 
-        firebase.database().ref('YC/').update({totalIncome: totalIncome})
+        firebase.database().ref(currentUID).update({totalIncome: totalIncome})
         $("#income").text(totalIncome)  
       }
       $("#balance").text(balance)
@@ -257,8 +257,8 @@ $(() => {
         totalExpense -= changeOfAmount
         balance += changeOfAmount
         //console.log(totalExpense)
-        firebase.database().ref('YC/' + date +'/'+ type).remove()
-        firebase.database().ref('YC/').update({totalExpense: totalExpense})
+        firebase.database().ref(currentUID + '/'+ date +'/'+ type).remove()
+        firebase.database().ref(currentUID).update({totalExpense: totalExpense})
         //console.log(dummyTag)
         $("#expense").text(totalExpense)
       }
@@ -266,8 +266,8 @@ $(() => {
       else {
         totalIncome -= changeOfAmount
         balance -= changeOfAmount
-        firebase.database().ref('YC/' + date +'/'+ type).remove()
-        firebase.database().ref('YC/').update({totalIncome: totalIncome})
+        firebase.database().ref(currentUID + '/'+ date +'/'+ type).remove()
+        firebase.database().ref(currentUID).update({totalIncome: totalIncome})
   
         $("#income").text(totalIncome)
       }
