@@ -35,56 +35,20 @@ $(() => {
         let oldUser = snapshot.hasChild(currentUID)
         if (!oldUser) {
           console.log(currentUID)
+          console.log('new')
           firebase.database().ref(currentUID).set({
             totalExpense: 0,
             totalIncome:0
           })
         }
       })
-      
-      
 
-        // We save the Firebase Messaging Device token and enable notifications.
-        // saveMessagingDeviceToken();
-    } else { // User is signed out!
-        // Hide user's profile and sign-out button.
-        $('#test').attr('hidden', 'true')
-        $('#signInBtn').removeAttr('hidden')
-      $('#signOutBtn').attr('hidden', 'true')
-      $('#detail').attr('hidden', 'true')
-      $('#addTrans').attr('hidden', 'true') 
-    }
-  }
-
-  function initFirebaseAuth() {
-    firebase.auth().onAuthStateChanged(authStateObserver);
-  }
-  initFirebaseAuth()
-
-  $('#signInBtn').click(() => {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        if (result.additionalUserInfo.isNewUser == true) {
-          newUser = true;
-          
-          console.log(true)
-        }
-    }).catch(function(error) {
-        console.log(error.message);
-    });  
-  })
-
-  $('#signOutBtn').click(() => {
-    firebase.auth().signOut();
-  })
-
-
-  var totalExpense = 0
-  var totalIncome = 0
-  var balance = 0
+      var totalExpense = 0
+    var totalIncome = 0
+    var balance = 0
   // Print data
   console.log(currentUID)
-  
+  console.log("start")
   var query = firebase.database().ref("YC")
   var numberOfData = 0
   query.once("value").then((snapshot) => {
@@ -176,6 +140,45 @@ $(() => {
 
       //$("#data").append(childData)
     });
+      
+      
+
+        // We save the Firebase Messaging Device token and enable notifications.
+        // saveMessagingDeviceToken();
+    } else { // User is signed out!
+        // Hide user's profile and sign-out button.
+        $('#test').attr('hidden', 'true')
+        $('#signInBtn').removeAttr('hidden')
+      $('#signOutBtn').attr('hidden', 'true')
+      $('#detail').attr('hidden', 'true')
+      $('#addTrans').attr('hidden', 'true') 
+    }
+  }
+
+  function initFirebaseAuth() {
+    firebase.auth().onAuthStateChanged(authStateObserver);
+  }
+  initFirebaseAuth()
+
+  $('#signInBtn').click(() => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        if (result.additionalUserInfo.isNewUser == true) {
+          newUser = true;
+          
+          console.log(true)
+        }
+    }).catch(function(error) {
+        console.log(error.message);
+    });  
+  })
+
+  $('#signOutBtn').click(() => {
+    firebase.auth().signOut();
+  })
+
+
+  
  
   // Insertion
   $('#save').click(() => {
