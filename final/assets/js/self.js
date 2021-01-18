@@ -20,11 +20,10 @@ $(() => {
   var currentUID = ''
 
   function authStateObserver(user) {
-    if (user) { // User is signed in!
+    if (user) { // sign in
       console.log("hi")
 
       currentUID = firebase.auth().currentUser.uid
-      //console.log(currentUID)
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
       $('#signOutBtn').removeAttr('hidden')
@@ -56,12 +55,9 @@ $(() => {
 
 
       if (key == "totalExpense") {
-        //console.log(key)
         totalExpense = parseInt(childSnapshot.val())
         $("#expense").text(totalExpense)
-        //console.log(totalExpense)
       } else if (key == "totalIncome") {
-        //console.log(key)
         totalIncome = parseInt(childSnapshot.val())
         $("#income").text(totalIncome)
       } else {
@@ -69,17 +65,12 @@ $(() => {
         
         $("#dummy").append("<div class='modal-header'><h5 class='modal-title sub-title'>" + key + "</h5></div><div class='modal-body'><div class='alert sub-detail' id="+key+ "></div></div>")
         $("#dummy").removeAttr("id")
-      //console.log(key)
         childSnapshot.forEach((grandChild) =>{
           let grandChildKey = grandChild.key
           let grandChildAmount = grandChild.val()
-        //console.log(grandChildKey)
-        //console.log(grandChildAmount)
           let tag = "#" + key
           $(tag).append("<div class='input-group mb-3 label' id="+numberOfData+"><div class='detail-font' style='margin-right: auto;'id='Category'>" + grandChildKey + "</div><div id="+key+grandChildKey+">" + grandChildAmount +"</div></div>")
           
-            //$("#data").prepend(grandChildKey)
-            //$("#data").prepend(grandChildAmount)
           
           // Deletion
 
@@ -126,23 +117,16 @@ $(() => {
 
           numberOfData++
         })
-      //$("#data").prepend(childData)
       }
       
       });
-      //var childData = childSnapshot.val();
       balance = totalIncome - totalExpense
       
       $("#balance").text(balance)
-      //console.log(childData)
-
-      //$("#data").append(childData)
     });
       
       
 
-        // We save the Firebase Messaging Device token and enable notifications.
-        // saveMessagingDeviceToken();
     } else { // signed out
         $('#test').attr('hidden', 'true')
         $('#signInBtn').removeAttr('hidden')
@@ -267,25 +251,12 @@ $(() => {
         $("#income").text(totalIncome)
       }
       $("#balance").text(balance)
-      //console.log($(dummyTag).children("#Category").text())
-
-
-
-      //console.log(detailTag)
-      //console.log($(dummyTag).children(detailTag).text())
-      //console.log(dummyTag)
-      
 
       if ($(dummyTag).parent().children().length == 1) {
         $(dummyTag).parent().parent().parent().remove()
       }
 
-      //console.log($(dummyTag).parent().length)
       $(dummyTag).remove()
-      //console.log($(dummyTag).parent().length)
-      
-
-      
 
     })
     numberOfData++
