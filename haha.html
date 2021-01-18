@@ -7,41 +7,18 @@
   <title>Firebase Example</title>
 </head>
 <body>
-  <div id="firebaseui-auth-container">
-    <!-- This is where the Login ui will load -->
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <button id="signInBtn">sign in</button>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-https://firebase.google.com/docs/web/setup#config-web-app -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyBw49-qQaOfusS1ctyBeoZ9vir52bm-eE8",
-      authDomain: "final-cda2a.firebaseapp.com",
-      databaseURL: "https://final-cda2a-default-rtdb.firebaseio.com",
-      projectId: "final-cda2a",
-      storageBucket: "final-cda2a.appspot.com",
-      messagingSenderId: "125502150967",
-      appId: "1:125502150967:web:c0c9bb7cb0990a686722b2",
-      measurementId: "G-WWW28G6KKM"
-  };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <div id="test" hidden="true">hihihi</div>
+  <button id="signOutBtn">sign in</button>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
   <!-- Firebase UI -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
-    />    
+  
     <script src="./auth.js"></script>
-    
+    <script src="./assets/jquery-3.5.1.js"></script>  
 
 </body>
 </html>
