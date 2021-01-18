@@ -34,7 +34,7 @@ $(() => {
         // Get the signed-in user's profile pic and name.
         var profilePicUrl = getProfilePicUrl();
         var userName = getUserName();
-  
+      console.log("hi")
       $('#test').removeAttr('hidden')
       $('#signInBtn').attr('hidden', 'true')
       $('#signOutBtn').removeAttr('hidden')
