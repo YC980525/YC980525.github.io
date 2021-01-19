@@ -21,7 +21,6 @@ $(() => {
 
   function authStateObserver(user) {
     if (user) { // sign in
-      console.log("hi")
 
       currentUID = firebase.auth().currentUser.uid
       $('#test').removeAttr('hidden')
@@ -35,8 +34,6 @@ $(() => {
       .then(function(snapshot) {
         let oldUser = snapshot.hasChild(currentUID)
         if (!oldUser) {
-          console.log(currentUID)
-          console.log('new')
           firebase.database().ref(currentUID).set({
             totalExpense: 0,
             totalIncome:0
@@ -46,8 +43,6 @@ $(() => {
 
       
         // Print data
-        console.log(currentUID)
-        console.log("start")
         var query = firebase.database().ref(currentUID)
         query.once("value").then((snapshot) => {
         snapshot.forEach((childSnapshot) => {
@@ -84,7 +79,6 @@ $(() => {
             if (type != "Income") {
               totalExpense -= changeOfAmount
               balance += changeOfAmount
-              console.log(key)
               firebase.database().ref(currentUID + '/' + key +'/'+ type).remove()
               firebase.database().ref(currentUID).update({totalExpense: totalExpense})
         
@@ -94,19 +88,12 @@ $(() => {
             else {
               totalIncome -= changeOfAmount
               balance -= changeOfAmount
-              console.log(key)
               firebase.database().ref(currentUID + '/' + key +'/'+ type).remove()
               firebase.database().ref(currentUID).update({totalIncome: totalIncome})
         
               $("#income").text(totalIncome)
             }
             $("#balance").text(balance)
-            console.log($(dummyTag).children("#Category").text())
-
-
-
-            console.log(detailTag)
-            console.log($(dummyTag).children(detailTag).text())
 
             if ($(dummyTag).parent().children().length == 1) {
               $(dummyTag).parent().parent().parent().remove()
@@ -149,10 +136,8 @@ $(() => {
         if (result.additionalUserInfo.isNewUser == true) {
           newUser = true;
           
-          console.log(true)
         }
     }).catch(function(error) {
-        console.log(error.message);
     });  
   })
 
@@ -174,7 +159,6 @@ $(() => {
     else {
 
       
-      //console.log(date)
       let dateTag = "#" + date
       let detailTag = "#" + date + category
 
@@ -235,10 +219,8 @@ $(() => {
         
         totalExpense -= changeOfAmount
         balance += changeOfAmount
-        //console.log(totalExpense)
         firebase.database().ref(currentUID + '/'+ date +'/'+ type).remove()
         firebase.database().ref(currentUID).update({totalExpense: totalExpense})
-        //console.log(dummyTag)
         $("#expense").text(totalExpense)
       }
 
